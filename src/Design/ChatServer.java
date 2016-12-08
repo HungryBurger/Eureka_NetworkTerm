@@ -18,7 +18,8 @@ import java.lang.String;
  * 4. Read the Input
  * 5. Check for whisper
  *		whisper
- *		1->split the input and get name 
+ *		1->split the input 
+ *and get name 
  *		2->Match name from hashMap and find the client
  *		3->Print to appropriate client.
  * 		Else

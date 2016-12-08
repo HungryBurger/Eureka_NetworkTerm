@@ -188,9 +188,6 @@ public class Flash extends JFrame implements Runnable {
 		problem.setHorizontalAlignment(JLabel.CENTER);
 		panel_1.add(problem);
 		problem.setBounds(150,50, 600, 300);
-		label = new JLabel(String.format("%04d:%02d:%02d.%03d", 0, 0, 0, 0));
-		label.setBounds(81, 78, 200, 200);
-		panel_1.add(label);
 		timer = new Timer(1000, new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				long runningTime = System.currentTimeMillis() - lastTickTime;

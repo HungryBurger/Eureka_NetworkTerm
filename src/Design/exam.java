@@ -127,6 +127,11 @@ public class exam extends JFrame {
 						System.out.println("1번 ");
 						try {
 							client.out.println("1");
+							String temp = client.in.readLine();
+							if(temp.equals("correct"))
+								new correct().setVisible(true);
+							else
+								new error().setVisible(true);
 							String a = client.in.readLine();
 							if(a.equals("[END]"))
 							{
@@ -189,6 +194,11 @@ public class exam extends JFrame {
 						System.out.println("2번 ");
 						try {
 							client.out.println("2");
+							String temp = client.in.readLine();
+							if(temp.equals("correct"))
+								new correct().setVisible(true);
+							else
+								new error().setVisible(true);
 							String a = client.in.readLine();
 							if(a.equals("[END]"))
 							{
@@ -240,12 +250,18 @@ public class exam extends JFrame {
 						System.out.println("4번 ");
 						try {
 							client.out.println("4");
+							String temp = client.in.readLine();
+							if(temp.equals("correct"))
+								new correct().setVisible(true);
+							else
+								new error().setVisible(true);
 							String a = client.in.readLine();
 							if(a.equals("[END]"))
 							{
 								String Score=client.in.readLine();
 								client.out.println("[Result]");
 								client.out.println(Score);
+								
 								new Result().setVisible(true);
 								setVisible(false);
 							}
@@ -270,8 +286,6 @@ public class exam extends JFrame {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
-
-
 					}
 				}
 			});
@@ -292,6 +306,11 @@ public class exam extends JFrame {
 						System.out.println("3번 ");
 						try {
 							client.out.println("3");
+							String temp = client.in.readLine();
+							if(temp.equals("correct"))
+								new correct().setVisible(true);
+							else
+								new error().setVisible(true);
 							String a = client.in.readLine();
 							if(a.equals("[END]"))
 							{
@@ -392,52 +411,6 @@ public class exam extends JFrame {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
-		//		long check = 0;
-		//		long take = 0;
-		//		JLabel young = new JLabel(String.format("%04d:%02d:%02d.%03d", 0, 0, 0, 0));
-		//		young.setBounds(81, 136, 200, 102);
-		//		contentPane.add(young);
-		//		timer = new Timer(1000, new ActionListener() {
-		//			public void actionPerformed(ActionEvent e) {
-		//				long runningTime = System.currentTimeMillis() - lastTickTime;
-		//				Duration duration = Duration.ofMillis(runningTime);
-		//				long hours = duration.toHours();
-		//				duration = duration.minusHours(hours);
-		//				long minutes = duration.toMinutes();
-		//				duration = duration.minusMinutes(minutes);
-		//				long millis = duration.toMillis();
-		//				long seconds = millis / 1000;
-		//				millis-=(seconds * 1000);
-		//				young.setText(String.format("%04d:%02d:%d.%03d", hours, minutes, seconds, check));
-		//				try {
-		//					if(seconds%5!=0)
-		//					{
-		//						System.out.println(millis);
-		//						String a=client.in.readLine();
-		//						String a1=client.in.readLine();
-		//						String a2=client.in.readLine();
-		//						String a3=client.in.readLine();
-		//						String a4=client.in.readLine();
-		//						problem.setFont(f2);
-		//						problem.setText(a);
-		//						label.setText("1.  "+a1);
-		//						label_1.setText("2.  "+a2);
-		//						label_2.setText("3.   "+a3);
-		//						label_3.setText("4.   "+a4);
-		//					}
-		//					else if(seconds == 30)
-		//					{
-		//						timer.stop();
-		//						setVisible(false);
-		//						new Finish().setVisible(true);
-		//					}
-		//				} catch (IOException e1) {
-		//					// TODO Auto-generated catch block
-		//					e1.printStackTrace();
-		//				}
-		//			}
-		//		});
-
 	}
 
 }

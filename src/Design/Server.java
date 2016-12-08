@@ -164,11 +164,13 @@ public class Server extends JFrame implements ActionListener {
 								if(abc.equals(ta))
 								{
 									System.out.println("맞았어");
+									out.println("correct");
 									count++;
 								}
 								else
 								{
 									System.out.println("틀렸어");
+									out.println("error");
 								}
 
 								already.add(idx);
